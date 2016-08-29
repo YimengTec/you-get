@@ -58,14 +58,14 @@ def acfun_download_by_vid(vid, title, output_dir='.', merge=True, info_only=Fals
 
     if not info_only and not dry_run:
         if not kwargs['caption']:
-            print('Skipping danmaku.')
+            #print('Skipping danmaku.')
             return
         try:
             title = get_filename(title)
-            print('Downloading %s ...\n' % (title + '.cmt.json'))
-            cmt = get_srt_json(vid)
-            with open(os.path.join(output_dir, title + '.cmt.json'), 'w', encoding='utf-8') as x:
-                x.write(cmt)
+            #print('Downloading %s ...\n' % (title + '.cmt.json'))
+            #cmt = get_srt_json(vid)
+            #with open(os.path.join(output_dir, title + '.cmt.json'), 'w', encoding='utf-8') as x:
+                #x.write(cmt)
         except:
             pass
 

@@ -689,6 +689,8 @@ def get_output_filename(urls, title, ext, output_dir, merge):
 
 def download_urls(urls, title, ext, total_size, output_dir='.', refer=None, merge=True, faker=False, headers = {}, **kwargs):
     assert urls
+    print(urls)
+    return
     if json_output:
         json_output_.download_urls(urls=urls, title=title, ext=ext, total_size=total_size, refer=refer)
         return
@@ -808,6 +810,8 @@ def download_urls(urls, title, ext, total_size, output_dir='.', refer=None, merg
 
 def download_urls_chunked(urls, title, ext, total_size, output_dir='.', refer=None, merge=True, faker=False, headers = {}):
     assert urls
+    print(urls)
+    return
     if dry_run:
         print('Real URLs:\n%s\n' % urls)
         return
@@ -887,6 +891,8 @@ def download_urls_chunked(urls, title, ext, total_size, output_dir='.', refer=No
 
 def download_rtmp_url(url,title, ext,params={}, total_size=0, output_dir='.', refer=None, merge=True, faker=False):
     assert url
+    print(url)
+    return
     if dry_run:
         print('Real URL:\n%s\n' % [url])
         if params.get("-y",False): #None or unset ->False
@@ -904,6 +910,8 @@ def download_rtmp_url(url,title, ext,params={}, total_size=0, output_dir='.', re
 
 def download_url_ffmpeg(url,title, ext,params={}, total_size=0, output_dir='.', refer=None, merge=True, faker=False):
     assert url
+    print(url)
+    return
     if dry_run:
         print('Real URL:\n%s\n' % [url])
         if params.get("-y",False): #None or unset ->False
@@ -924,6 +932,7 @@ def playlist_not_supported(name):
     return f
 
 def print_info(site_info, title, type, size):
+    return
     if json_output:
         json_output_.print_info(site_info=site_info, title=title, type=type, size=size)
         return

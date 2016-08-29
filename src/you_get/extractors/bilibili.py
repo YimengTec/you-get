@@ -82,10 +82,10 @@ def bilibili_download(url, output_dir='.', merge=True, info_only=False, **kwargs
             print('Skipping danmaku.')
             return
         title = get_filename(title)
-        print('Downloading %s ...\n' % (title + '.cmt.xml'))
-        xml = get_srt_xml(cid)
-        with open(os.path.join(output_dir, title + '.cmt.xml'), 'w', encoding='utf-8') as x:
-            x.write(xml)
+        #print('Downloading %s ...\n' % (title + '.cmt.xml'))
+        #xml = get_srt_xml(cid)
+        #with open(os.path.join(output_dir, title + '.cmt.xml'), 'w', encoding='utf-8') as x:
+            #x.write(xml)
 
 site_info = "bilibili.com"
 download = bilibili_download

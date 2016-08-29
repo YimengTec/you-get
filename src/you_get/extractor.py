@@ -119,6 +119,7 @@ class VideoExtractor():
         print()
 
     def p(self, stream_id=None):
+        return # don't print
         maybe_print("site:                %s" % self.__class__.name)
         maybe_print("title:               %s" % self.title)
         if stream_id:
