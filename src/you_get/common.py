@@ -689,7 +689,8 @@ def get_output_filename(urls, title, ext, output_dir, merge):
 
 def download_urls(urls, title, ext, total_size, output_dir='.', refer=None, merge=True, faker=False, headers = {}, **kwargs):
     assert urls
-    print(urls)
+    data_string = json.dumps(urls)
+    print(data_string)
     return
     if json_output:
         json_output_.download_urls(urls=urls, title=title, ext=ext, total_size=total_size, refer=refer)
@@ -810,7 +811,8 @@ def download_urls(urls, title, ext, total_size, output_dir='.', refer=None, merg
 
 def download_urls_chunked(urls, title, ext, total_size, output_dir='.', refer=None, merge=True, faker=False, headers = {}):
     assert urls
-    print(urls)
+    data_string = json.dumps(urls)
+    print(data_string)
     return
     if dry_run:
         print('Real URLs:\n%s\n' % urls)
@@ -891,7 +893,8 @@ def download_urls_chunked(urls, title, ext, total_size, output_dir='.', refer=No
 
 def download_rtmp_url(url,title, ext,params={}, total_size=0, output_dir='.', refer=None, merge=True, faker=False):
     assert url
-    print(url)
+    data_string = json.dumps(url)
+    print(data_string)
     return
     if dry_run:
         print('Real URL:\n%s\n' % [url])
