@@ -913,7 +913,8 @@ def download_rtmp_url(url,title, ext,params={}, total_size=0, output_dir='.', re
 
 def download_url_ffmpeg(url,title, ext,params={}, total_size=0, output_dir='.', refer=None, merge=True, faker=False):
     assert url
-    print(url)
+    data_string = json.dumps(url)
+    print(data_string)
     return
     if dry_run:
         print('Real URL:\n%s\n' % [url])
